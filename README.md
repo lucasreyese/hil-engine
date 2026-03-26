@@ -20,6 +20,7 @@ graph LR
     A[Python Simulator] <-->|USB| B[USB-to-CAN]
     B <-->|CAN Bus| C[STM32 ECM]
 ```
+![USB Device connected to a STM32 on a breadboard.](docs/layout.png)
 
 ## Hardware
 - STM32 development board (NUCLEO-F401RE)
