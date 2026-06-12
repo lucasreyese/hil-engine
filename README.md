@@ -61,16 +61,6 @@ ECM holds closed-loop λ, manages knock, and limits revs. On real hardware, brin
 up the CANable instead (`sudo ip link set can0 up type can bitrate 500000`) and
 use `can0`.
 
-## What it demonstrates
-
-- **Starting & idle** — cranking enrichment, then a spark-based idle-speed governor.
-- **Closed-loop fueling** — wideband-λ PI trim to stoich once warm; open-loop
-  warmup and cold-start enrichment when cold; power enrichment at high load.
-- **Spark & knock control** — MBT-edge base timing with knock-feedback retard.
-- **Protection** — overrun fuel cut and a rev limiter.
-- **Realistic plant** — manifold filling dynamics, wall-film fuel lag, O2 transport
-  delay, torsional crank-speed ripple, thermal warmup.
-
 ## Components
 
 | Path | What |
@@ -89,7 +79,3 @@ make -C ecm lib
 python3 ecm/tests/test_byte_compat.py     # C packing == cantools/DBC
 python3 ecm/tests/test_closed_loop.py     # compiled C ECM controls the plant
 ```
-
-## Physical Configuration
-
-![Image showing three pieces of hardware connected to one another. The one on the far left with USB, then a twisted green and yellow cable connecting it in the middle.][docs/layout.png]
