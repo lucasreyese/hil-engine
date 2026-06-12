@@ -1,1 +1,8 @@
 Research
+
+.venv/
+.deps/
+__pycache__/
+*.pyc
+
+ecm/build/
