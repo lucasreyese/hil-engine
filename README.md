@@ -71,3 +71,7 @@ make -C ecm lib
 python3 ecm/tests/test_byte_compat.py     # C packing == cantools/DBC
 python3 ecm/tests/test_closed_loop.py     # compiled C ECM controls the plant
 ```
+
+## Physical Configuration
+
+![Image showing three pieces of hardware connected to one another. The one on the far left with USB, then a twisted green and yellow cable connecting it in the middle.][docs/layout.png]
